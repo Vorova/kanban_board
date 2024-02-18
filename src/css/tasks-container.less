@@ -7,6 +7,94 @@
     font-weight: bold;
     display: block;
     padding: 30px 0;
-    font-size: 1.5em;
+    font-size: 1.6em;
+  }
+  .tasks{
+
+  }
+  .new_task{
+    margin: 10px 0;
+    border: 2px solid #343434;
+    border-radius: 10px;
+    font-size: 1em;
+    padding: 15px 15px 10px;
+    input,textarea{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      border: none;
+      border-radius: 0;
+      padding: 4px 0;
+      background-color: transparent;
+      outline: none;
+      color: white;
+    }
+    input{
+      font-weight: bold;
+      &::placeholder {
+        color: gray;
+        font-weight: normal;
+      }
+    }
+    textarea{
+      font-weight: normal;
+      min-height: 80px;
+      max-height: 250px;
+      /* Общие стили для скроллбара */
+      &::-webkit-scrollbar {
+        width: 0.7em; /* Ширина скроллбара */
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #585858; /* Цвет фона трека */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #1E1E1E;
+        border-radius: 2px; /* Закругленные углы */
+        border: 3px solid #f1f1f1; /* Бордер вокруг ползунка */
+      }
+
+      /* Изменение внешнего вида ползунка при наведении */
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #1E1E1E;
+      }
+    }
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #333333;
+      margin: 5px 0;
+    }
+    .buttons{
+      padding: 10px 0 5px;
+      display: flex;
+      justify-content: flex-end;
+      button{
+        font-size: 1em;
+        padding: 7px 15px;
+        border-style: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #button_reset_task{
+        @back: #383838;
+        background: @back;
+        color: white;
+        &:hover{
+          background: lighten(@back, 3%);
+        }
+      }
+      #button_add_task{
+        @back: tomato;
+        margin-left: 15px;
+        background: @back;
+        color: white;
+        &:hover{
+          background: lighten(@back, 3%);
+        }
+      }
+    }
   }
 }

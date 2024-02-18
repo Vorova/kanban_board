@@ -6,10 +6,34 @@
     <title>My kanban</title>
 </head>
 <body>
-    <div class="tasks_container">
-        <div class="header">
-            <header>Входящие</header>
+<div class="tasks_container">
+    <div class="header">
+        <header>Список незавершенных задач</header>
+    </div>
+    <div class="tasks">
+        <div class="task">
+            item task 1
+        </div>
+        <div class="task">
+            item task 2
         </div>
     </div>
+    <div class="new_task">
+        <input type="text"
+               name="title"
+               placeholder="Название задачи"
+               class="title_new_task"
+               tabindex="1">
+        <textarea name="description"
+                  class="description_new_task"
+                  placeholder="Описание"
+                  tabindex="2"></textarea>
+        <hr>
+        <div class="buttons">
+            <button type="reset" id="button_reset_task">Отмена</button>
+            <button type="submit" id="button_add_task">Добавить задачу</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
